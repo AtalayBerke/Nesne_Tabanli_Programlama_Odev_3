@@ -1,0 +1,32 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Ornek_2
+{
+    class Program
+    {
+
+        public ulong OgrenciNo;
+        public string Ad;
+        public string Soyad;
+        public string Bolum;
+        public byte Sinif;
+
+
+        static void Main(string[] args)
+        {
+            Program pr = new Program();
+            Console.WriteLine(pr.OgrenciNo);
+            Console.WriteLine(pr.Ad);
+            Console.WriteLine(pr.Soyad);
+            Console.WriteLine(pr.Bolum);
+            Console.WriteLine(pr.Sinif);
+            Console.Read();
+
+
+        }
+    }
+}

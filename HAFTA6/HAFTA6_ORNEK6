@@ -1,0 +1,30 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Ornek_6
+{
+    class Program
+    {
+
+        enum GUNLER : byte
+        {
+            PAZARTESI,
+            SALI,
+            CARSAMBA,
+            PERSEMBE,
+            CUMA,
+            CUMARTESI,
+            PAZAR
+        }
+
+        static void Main(string[] args)
+        {
+            Console.WriteLine((int)GUNLER.PAZARTESI);
+            Console.WriteLine((int)GUNLER.PAZAR);
+            Console.Read();
+        }
+    }
+}

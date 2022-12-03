@@ -1,0 +1,32 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Ornek_2
+{
+    class Program
+    {
+
+        public int Sayi;
+        public Program(int sayi)
+        {
+            Sayi = sayi;
+        }
+
+        public static explicit operator int(Program a)
+        {
+            return a.Sayi;
+        }
+
+
+
+        static void Main(string[] args)
+        {
+            Program pr = new Program(50);
+            int b = (int)pr; Console.WriteLine(b);
+            Console.Read();
+        }
+    }
+}

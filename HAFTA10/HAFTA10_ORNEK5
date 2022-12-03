@@ -1,0 +1,93 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Ornek_5
+{
+    class Program
+    {
+        delegate void OlayYoneticisi();
+
+        class deneme
+        {
+            OlayYoneticisi[] evnt = new OlayYoneticisi[3];
+            public int i = 0; public int j = 0;
+            public event OlayYoneticisi Olay
+            {
+                add
+                {
+                    if (evnt[i]==null)
+                    {
+                        evnt[i] = value;
+                        Console.WriteLine((i + 1) + ".Olay");
+                        i++;
+
+                        if (i==3)
+                        {
+                            --i; Console.WriteLine("Olay Listesi Dolu");
+                        }
+                      
+                    }
+                }
+                remove
+                {
+                    Console.WriteLine(i);
+
+                    if (evnt[i]==value)
+                    {
+                        evnt[i] = null;
+                        Console.WriteLine("Olay Çıkarıldı");
+                        i--;
+                    }
+                    if (i==1)
+                    {
+                        Console.WriteLine("Olay bulunamadı");
+                    }
+                }
+
+            }
+
+            public void Olayim()
+            {
+                for (int j = 0; j <= i; j++)
+                {
+                    if (evnt[j] !=null)
+                    {
+                        evnt[j]();
+                    }
+                }
+            }
+        }
+
+        static void Metot1()
+        {
+            Console.WriteLine("Metot1");
+        }
+
+        static void Metot2()
+        {
+            Console.WriteLine("Metot2");
+        }
+
+        static void Metot3()
+        {
+            Console.WriteLine("Metot3");
+        }
+
+        static void Main(string[] args)
+        {
+            deneme d = new deneme();
+            d.Olay += new OlayYoneticisi(Metot1);
+            d.Olay += new OlayYoneticisi(Metot2);
+            d.Olay += new OlayYoneticisi(Metot3);
+            d.Olayim();
+            d.Olay -= new OlayYoneticisi(Metot1);
+            d.Olay -= new OlayYoneticisi(Metot2);
+            d.Olay -= new OlayYoneticisi(Metot3);
+            d.Olayim();
+            Console.Read();
+        }
+    }
+}

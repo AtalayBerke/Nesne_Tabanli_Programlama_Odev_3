@@ -1,0 +1,32 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Ornek_3
+{
+    class Program
+    {
+        public double rakam;
+        public double this[double index]
+        {
+            get { return Math.Pow(index, 2); }
+            set { rakam = value; }
+        }
+        
+
+        static void Main(string[] args)
+        {
+            Program p = new Program();
+            Console.WriteLine("p[3.4]={0}",p[3.4]);
+            p[10]=10;
+            Console.WriteLine(p.rakam);
+            p[10] = 15;
+            Console.WriteLine(p.rakam);
+            Console.WriteLine("p[10]={0}",p[10]);
+            Console.Read();
+
+        }
+    }
+}

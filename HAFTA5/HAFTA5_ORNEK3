@@ -1,0 +1,26 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Ornek_3
+{
+    class Program
+    {
+
+        public ulong HesapNo;
+
+
+        static void Main(string[] args)
+        {
+            Program pr1 = new Program();
+            Program pr2 = new Program();
+            pr1.HesapNo = 3456;
+            pr2.HesapNo = 1111;
+            Console.WriteLine(pr1.HesapNo);
+            Console.WriteLine(pr2.HesapNo);
+            Console.Read();
+        }
+    }
+}

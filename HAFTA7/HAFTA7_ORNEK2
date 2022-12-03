@@ -1,0 +1,36 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace isimalan1
+{
+    class Deneme{
+        public Deneme()
+        {
+            Console.WriteLine("Deneme 1");
+        }
+    }
+}
+
+
+
+
+namespace Ornek_2
+{
+    class Program
+    {
+        public Program()
+        {
+            Console.WriteLine("Deneme 2");
+        }
+
+        static void Main(string[] args)
+        {
+            isimalan1.Deneme d1 = new isimalan1.Deneme();
+            Ornek_2.Program d2 = new Ornek_2.Program();
+            Console.Read();
+        }
+    }
+}

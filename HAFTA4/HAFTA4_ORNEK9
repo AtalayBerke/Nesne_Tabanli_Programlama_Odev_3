@@ -1,0 +1,29 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Ornek_9
+{
+    class Program
+    {
+
+        static void Metot1(float x, float y)
+        {
+            Console.WriteLine("1.Metot Çağırıldı");
+        }
+
+        static void Metot1(double x, double y)
+        {
+            Console.WriteLine("2.Metot Çağırıldı");
+        }
+
+        static void Main(string[] args)
+        {
+            Metot1(5, 6);
+            Metot1(5.4, 2.3);
+            Console.Read();
+        }
+    }
+}

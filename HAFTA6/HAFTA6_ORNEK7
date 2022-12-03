@@ -1,0 +1,31 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Ornek_7
+{
+    class Program
+    {
+        enum GUNLER : byte
+        {
+            PAZARTESI,
+            SALI,
+            CARSAMBA,
+            PERSEMBE,
+            CUMA,
+            CUMARTESI,
+            PAZAR
+        }
+        static void Main(string[] args)
+        {
+            string[] sabitler = Enum.GetName(typeof(GUNLER));
+            foreach (string s in sabitler)
+            {
+                Console.WriteLine(s);
+            }
+            Console.Read();
+        }
+    }
+}

@@ -1,0 +1,37 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Ornek_6
+{
+    class Program
+    {
+
+        static int BuyukBul(int a,int b)
+        {
+            if (a>b)
+            {
+                return a;
+            }
+            else
+            {
+                return b;
+            }
+
+        }
+        static void Main(string[] args)
+        {
+            int s1, s2;
+            Console.WriteLine("1.Sayıyı Girin:");
+            s1 = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("2.Sayıyı Girin:");
+            s2 = Convert.ToInt32(Console.ReadLine());
+
+            int enbuyukbul = BuyukBul(s1, s2);
+            Console.WriteLine("En Büyük: {0}\'dir", enbuyukbul);
+            Console.ReadLine();
+        }
+    }
+}

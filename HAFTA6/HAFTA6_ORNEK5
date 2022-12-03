@@ -1,0 +1,28 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Ornek_5
+{
+
+    class Program
+    {
+
+        enum notu : byte { basarisiz,basarili}
+        static void Main(string[] args)
+        {
+            notu a = notu.basarili;
+            if (a==(notu)1)
+            {
+                Console.Write("Başarılısınız");
+            }
+            else
+            {
+                Console.Write("Başarısısızsınız");
+            }
+            Console.Read();
+        }
+    }
+}

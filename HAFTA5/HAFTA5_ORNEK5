@@ -1,0 +1,40 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Ornek_5
+{
+    class Program
+    {
+        public int En;
+        public int Boy;
+        public int Alan()
+        {
+            int alan = En * Boy;
+            return alan;
+        }
+
+        public void EnBoyBelirle(int en, int boy)
+        {
+            En = en; Boy = boy;
+        }
+
+        public void yaz()
+        {
+            Console.WriteLine("En:{0,5}", En);
+            Console.WriteLine("En:{0,5}", Boy);
+            Console.WriteLine("En:{0,5}", Alan());
+        }
+        static void Main(string[] args)
+        {
+            Program pr = new Program();
+            pr.EnBoyBelirle(20, 50);
+            pr.yaz();
+            Program pr2 = new Program();
+            pr2.EnBoyBelirle(25, 12); pr2.yaz();
+            Console.Read();
+        }
+    }
+}
